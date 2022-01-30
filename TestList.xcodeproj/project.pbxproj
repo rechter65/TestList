@@ -15,6 +15,7 @@
 		84CA6ECD27A703CA0081CFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CA6ECB27A703CA0081CFCE /* LaunchScreen.storyboard */; };
 		84CA6ED827A703CA0081CFCE /* TestListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA6ED727A703CA0081CFCE /* TestListTests.swift */; };
 		84CA6EE327A703CA0081CFCE /* TestListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA6EE227A703CA0081CFCE /* TestListUITests.swift */; };
+		84CA6EF127A708AF0081CFCE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84CA6EF027A708AF0081CFCE /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84CA6EDE27A703CA0081CFCE /* TestListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CA6EE227A703CA0081CFCE /* TestListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListUITests.swift; sourceTree = "<group>"; };
 		84CA6EE427A703CA0081CFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CA6EF027A708AF0081CFCE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				84CA6EC927A703CA0081CFCE /* Assets.xcassets */,
 				84CA6ECB27A703CA0081CFCE /* LaunchScreen.storyboard */,
 				84CA6ECE27A703CA0081CFCE /* Info.plist */,
+				84CA6EF027A708AF0081CFCE /* .swiftlint.yml */,
 			);
 			path = TestList;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CA6EF127A708AF0081CFCE /* .swiftlint.yml in Resources */,
 				84CA6ECD27A703CA0081CFCE /* LaunchScreen.storyboard in Resources */,
 				84CA6ECA27A703CA0081CFCE /* Assets.xcassets in Resources */,
 				84CA6EC827A703C90081CFCE /* Main.storyboard in Resources */,
