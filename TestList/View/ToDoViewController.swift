@@ -8,7 +8,7 @@
 import UIKit
 
 class ToDoViewController: UIViewController {
-
+    
     @IBOutlet var toDoListTableView: UITableView!
 
     override func viewDidLoad() {
@@ -16,12 +16,10 @@ class ToDoViewController: UIViewController {
 
         let nib = UINib(nibName: "TaskTableViewCell", bundle: nil)
         toDoListTableView.register(nib, forCellReuseIdentifier: "TaskTableViewCell")
-
         toDoListTableView.delegate = self
         toDoListTableView.dataSource = self
-
+      
         }
-
     
     @IBAction func changeDate(_ sender: UIDatePicker) {
 
@@ -32,18 +30,16 @@ class ToDoViewController: UIViewController {
 extension ToDoViewController: UITableViewDelegate {}
 
 extension ToDoViewController: UITableViewDataSource {
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 24
+        return  24
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath) as! TaskTableViewCell
-
-        cell.timeLabel.text = "timeTask"
-        cell.timeTaskLabel.text = "timeTask"
-        cell.taskNameLabel.text = "taskName"
-
+        let time = TimeCell.make24hStrings(indexPath.row)
+        cell.timeLabel.text = time
         return cell
     }
 
