@@ -33,18 +33,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="CZO-Gl-ogP">
-                                <rect key="frame" x="16" y="96" width="343" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="CZO-Gl-ogP" secondAttribute="height" multiplier="343:57" id="zWI-nh-6W9"/>
-                                </constraints>
-                                <locale key="locale" localeIdentifier="ru_RU"/>
-                            </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YzV-xf-aal">
-                                <rect key="frame" x="16" y="161" width="343" height="486"/>
+                                <rect key="frame" x="16" y="91.5" width="343" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YzV-xf-aal" secondAttribute="height" multiplier="343:486" id="ZEQ-yV-4dC"/>
+                                    <constraint firstAttribute="width" secondItem="YzV-xf-aal" secondAttribute="height" multiplier="343:559" id="Uj6-EN-vhC"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskTableViewCell" id="q2B-Ib-a9r">
@@ -61,26 +54,111 @@
                                     <outlet property="delegate" destination="vu4-YD-Dog" id="oqF-hn-ivm"/>
                                 </connections>
                             </tableView>
+                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="CZO-Gl-ogP">
+                                <rect key="frame" x="16" y="44" width="144.5" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CZO-Gl-ogP" secondAttribute="height" multiplier="40:11" id="Yam-9D-mDh"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ru_RU"/>
+                                <connections>
+                                    <action selector="changeDate:" destination="vu4-YD-Dog" eventType="valueChanged" id="gKf-u9-f3Q"/>
+                                </connections>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-xJ-0zW">
+                                <rect key="frame" x="160.5" y="44" width="198.5" height="47.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vep-xJ-0zW" secondAttribute="height" multiplier="183:44" id="KTH-76-B8h"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="9rw-kt-GIn"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KMx-Fz-8uA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YzV-xf-aal" firstAttribute="leading" secondItem="KMx-Fz-8uA" secondAttribute="leading" constant="16" id="KiZ-e5-aiN"/>
-                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="trailing" secondItem="YzV-xf-aal" secondAttribute="trailing" constant="16" id="MaW-xr-fI7"/>
-                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="bottom" secondItem="YzV-xf-aal" secondAttribute="bottom" constant="20" id="UOf-Qy-TJO"/>
-                            <constraint firstItem="CZO-Gl-ogP" firstAttribute="leading" secondItem="KMx-Fz-8uA" secondAttribute="leading" constant="16" id="Xa2-YB-EbH"/>
-                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="trailing" secondItem="CZO-Gl-ogP" secondAttribute="trailing" constant="16" id="gFk-eg-nh9"/>
-                            <constraint firstItem="CZO-Gl-ogP" firstAttribute="top" secondItem="KMx-Fz-8uA" secondAttribute="top" id="pgj-gq-Qkh"/>
+                            <constraint firstItem="CZO-Gl-ogP" firstAttribute="leading" secondItem="KMx-Fz-8uA" secondAttribute="leading" constant="16" id="8nr-7p-F93"/>
+                            <constraint firstItem="Vep-xJ-0zW" firstAttribute="top" secondItem="KMx-Fz-8uA" secondAttribute="top" id="CfH-yE-C8Z"/>
+                            <constraint firstItem="YzV-xf-aal" firstAttribute="top" secondItem="Vep-xJ-0zW" secondAttribute="bottom" id="E39-MV-Ado"/>
+                            <constraint firstItem="CZO-Gl-ogP" firstAttribute="top" secondItem="KMx-Fz-8uA" secondAttribute="top" id="OzU-18-G6y"/>
+                            <constraint firstItem="Vep-xJ-0zW" firstAttribute="leading" secondItem="CZO-Gl-ogP" secondAttribute="trailing" id="XkB-dw-tya"/>
+                            <constraint firstItem="YzV-xf-aal" firstAttribute="top" secondItem="CZO-Gl-ogP" secondAttribute="bottom" constant="8" symbolic="YES" id="YeP-Yp-jti"/>
+                            <constraint firstItem="YzV-xf-aal" firstAttribute="leading" secondItem="KMx-Fz-8uA" secondAttribute="leading" constant="16" id="brI-XK-AFG"/>
+                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="trailing" secondItem="Vep-xJ-0zW" secondAttribute="trailing" constant="16" id="dYX-tI-Rpc"/>
+                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="trailing" secondItem="YzV-xf-aal" secondAttribute="trailing" constant="16" id="fPc-5n-3yG"/>
+                            <constraint firstItem="KMx-Fz-8uA" firstAttribute="trailing" secondItem="YzV-xf-aal" secondAttribute="trailing" constant="16" id="hWj-dx-5DX"/>
+                            <constraint firstItem="YzV-xf-aal" firstAttribute="leading" secondItem="KMx-Fz-8uA" secondAttribute="leading" constant="16" id="lrR-rS-opj"/>
+                            <constraint firstItem="Vep-xJ-0zW" firstAttribute="leading" secondItem="CZO-Gl-ogP" secondAttribute="trailing" id="oOq-mM-YNa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo List" id="Wkt-hn-QVc"/>
                     <connections>
+                        <outlet property="datePicker" destination="CZO-Gl-ogP" id="mMf-Vn-uOl"/>
                         <outlet property="toDoListTableView" destination="YzV-xf-aal" id="hK3-3l-cQo"/>
+                        <outlet property="toolBar" destination="Vep-xJ-0zW" id="Lbm-zw-Nbv"/>
+                        <segue destination="yuc-Zv-roH" kind="show" identifier="DetailsList" id="Xf5-nc-Yp4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnt-60-oW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-16.641679160419791"/>
+            <point key="canvasLocation" x="321" y="-16"/>
+        </scene>
+        <!--Details List View Controller-->
+        <scene sceneID="aXT-GE-OVV">
+            <objects>
+                <viewController id="yuc-Zv-roH" customClass="DetailsListViewController" customModule="TestList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="saE-pY-wkt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="XYU-XM-mW5">
+                                <rect key="frame" x="16" y="96" width="343" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XYU-XM-mW5" secondAttribute="height" multiplier="343:79" id="r26-zj-2mt"/>
+                                </constraints>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUs-iF-07S">
+                                <rect key="frame" x="16" y="183" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fUs-iF-07S" secondAttribute="height" multiplier="343:34" id="ZdP-Sc-kNu"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVi-OW-D93">
+                                <rect key="frame" x="16" y="247" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KVi-OW-D93" secondAttribute="height" multiplier="343:34" id="wYx-B8-wGi"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLa-4q-MuT">
+                                <rect key="frame" x="170.5" y="531" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hx5-Pu-rcp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYU-XM-mW5" firstAttribute="top" secondItem="hx5-Pu-rcp" secondAttribute="top" id="1u9-ak-iVf"/>
+                            <constraint firstItem="hx5-Pu-rcp" firstAttribute="bottom" secondItem="PLa-4q-MuT" secondAttribute="bottom" constant="106" id="7Hx-Nr-kHi"/>
+                            <constraint firstItem="hx5-Pu-rcp" firstAttribute="trailing" secondItem="XYU-XM-mW5" secondAttribute="trailing" constant="16" id="HCe-Rz-21S"/>
+                            <constraint firstItem="XYU-XM-mW5" firstAttribute="leading" secondItem="hx5-Pu-rcp" secondAttribute="leading" constant="16" id="LCM-Zh-UXp"/>
+                            <constraint firstItem="KVi-OW-D93" firstAttribute="leading" secondItem="hx5-Pu-rcp" secondAttribute="leading" constant="16" id="P0G-qX-Nwv"/>
+                            <constraint firstItem="hx5-Pu-rcp" firstAttribute="trailing" secondItem="KVi-OW-D93" secondAttribute="trailing" constant="16" id="Wrj-od-MRd"/>
+                            <constraint firstItem="PLa-4q-MuT" firstAttribute="centerX" secondItem="hx5-Pu-rcp" secondAttribute="centerX" id="X8Q-OP-G0q"/>
+                            <constraint firstItem="fUs-iF-07S" firstAttribute="top" secondItem="XYU-XM-mW5" secondAttribute="bottom" constant="8" symbolic="YES" id="cMW-fz-8WK"/>
+                            <constraint firstItem="hx5-Pu-rcp" firstAttribute="trailing" secondItem="fUs-iF-07S" secondAttribute="trailing" constant="16" id="ciE-za-DYp"/>
+                            <constraint firstItem="KVi-OW-D93" firstAttribute="top" secondItem="fUs-iF-07S" secondAttribute="bottom" constant="30" id="exx-Dz-Uf3"/>
+                            <constraint firstItem="fUs-iF-07S" firstAttribute="leading" secondItem="hx5-Pu-rcp" secondAttribute="leading" constant="16" id="tMo-uH-neA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FQm-Eh-2lc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUF-VB-0kj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="-429.53523238380814"/>
         </scene>
     </scenes>
     <resources>
